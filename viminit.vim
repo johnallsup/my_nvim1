@@ -10,9 +10,16 @@ set relativenumber
 set cmdheight=2
 
 
-inoremap jkl <esc>
-inoremap JKL <esc>
-source ~/.vim/arsehole.vim
+inoremap jk <esc>
+inoremap JK <esc>
+" force you to learn hjkl
+" inoremap <esc> <nop>
+inoremap <c-c> <nop>
+nnoremap <left> <nop>
+nnoremap <right> <nop>
+nnoremap <up> <nop>
+nnoremap <down> <nop>
+
 
 nnoremap wr :set wrap<cr>
 nnoremap nw :set nowrap<cr>
@@ -23,7 +30,7 @@ nnoremap <leader>pp :r! pp<cr>
 nnoremap <leader>pcf :silent :w !pc %<cr>
 
 " get and put
-vnoremap <leader>pu :w<home>silent <end> !put 
+vnoremap <leader>pu :w<home>silent <end> !put
 nnoremap ge :r!<space>get<space>
 nnoremap sls :!storels<cr>
 
