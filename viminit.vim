@@ -4,22 +4,19 @@ set nohlsearch
 set expandtab
 set shiftwidth=2
 set tabstop=2
+let @a = 'yyp:s/./=/g'
+let @c = '@a/^\D'
+"hi CursorLine   cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
+"hi CursorColumn cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
 set cursorline
 set shiftround
+autocmd FileType html :source ~/.vim/html.vim
 set relativenumber
 set cmdheight=2
 
-
 inoremap jk <esc>
 inoremap JK <esc>
-" force you to learn hjkl
-" inoremap <esc> <nop>
-inoremap <c-c> <nop>
-nnoremap <left> <nop>
-nnoremap <right> <nop>
-nnoremap <up> <nop>
-nnoremap <down> <nop>
-
+source ~/.vim/arsehole.vim
 
 nnoremap wr :set wrap<cr>
 nnoremap nw :set nowrap<cr>
@@ -34,21 +31,4 @@ vnoremap <leader>pu :w<home>silent <end> !put
 nnoremap ge :r!<space>get<space>
 nnoremap sls :!storels<cr>
 
-
-" Vimscript file settings --------- {{{
-augroup filetype_vim
-  autocmd!
-  autocmd FileType vim setlocal foldmethod=marker
-augroup END
-" }}}
-
-" ARSEHOLE -- disable cursor keys
-
-" force you to learn hjkl
-" inoremap <esc> <nop>
-inoremap <c-c> <nop>
-nnoremap <left> <nop>
-nnoremap <right> <nop>
-nnoremap <up> <nop>
-nnoremap <down> <nop>
 
