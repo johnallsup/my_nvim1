@@ -1,3 +1,4 @@
+vim.cmd('let mapleader = " "')
 require("theprimeagen")
 require("jda")
 

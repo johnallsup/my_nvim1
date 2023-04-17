@@ -21,6 +21,7 @@ source ~/.vim/arsehole.vim
 nnoremap wr :set wrap<cr>
 nnoremap nw :set nowrap<cr>
 
+let mapleader = " "
 " copy and paste
 vnoremap <leader>pc :w<home>silent <end> !pc<cr>
 nnoremap <leader>pp :r! pp<cr>
@@ -31,4 +32,17 @@ vnoremap <leader>pu :w<home>silent <end> !put
 nnoremap ge :r!<space>get<space>
 nnoremap sls :!storels<cr>
 
+nmap ; :
 
+highlight LineNr guibg=#333333 guifg=#ccaa88
+
+set number
+set relativenumber
+nnoremap <leader>rn :set relativenumber<cr>
+nnoremap <leader>an :set norelativenumber<crn
+
+set formatoptions-=cro
+nnoremap <leader>autocom :set formatoptions+=cro<cr>
+nnoremap <leader>nocom :set formatoptions-=cro<cr>
+
+nnoremap <leader>config :tabedit ~/.config/nvim<cr>
